@@ -13,17 +13,19 @@ function App() {
     const getQuote = async () => {
       const data = await getDocs(quoteCollection);
       console.log(data);
+      setQuote(data);
     };
-  
+    getQuote();
+
     return () => {
-      getQuote();
+
     };
   }, []);
   
 
   return (    
     <div className="App">
-      <h1>"{quote}"</h1>
+      <h1>"{}"</h1>
     </div>
   );
 }

@@ -2,7 +2,7 @@ import { initializeApp } from 'firebase/app';
 import { getFirestore } from 'firebase/firestore';
 
 const firebaseConfig = {
-  apiKey: "APIKEY",
+  apiKey: "API_KEY",
   authDomain: "wise-words-6c2ed.firebaseapp.com",
   projectId: "wise-words-6c2ed",
   storageBucket: "wise-words-6c2ed.appspot.com",
@@ -13,4 +13,6 @@ const firebaseConfig = {
 
 const app = initializeApp(firebaseConfig);
 
-export const db = getFirestore(app);
+const db = getFirestore(app);
+
+export { db }
