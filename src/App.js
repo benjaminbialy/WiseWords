@@ -12,8 +12,7 @@ function App() {
 
     const getQuote = async () => {
       const data = await getDocs(quoteCollection);
-      console.log(data);
-      setQuote(data);
+      setQuote(data.docs[0]._document.data.value.mapValue.fields.quote.stringValue);
     };
     getQuote();
 
@@ -25,7 +24,7 @@ function App() {
 
   return (    
     <div className="App">
-      <h1>"{}"</h1>
+      <h1>"{quote}"</h1>
     </div>
   );
 }
